@@ -1,0 +1,160 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #4caf50;
+}
+
+/* Form */
+#listForm {
+    background-color: white;
+    padding: 25px 35px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Label */
+#listForm > label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+/* Task List */
+#stackTasks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+/* Task Row */
+#stackTasks li.InputRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Task Label */
+#stackTasks li.InputRow label {
+    flex-shrink: 0;
+    width: 70px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Task Input */
+#stackTasks li.InputRow input {
+    flex-grow: 1;
+    min-width: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #222;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#stackTasks li.InputRow input:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 6px #4caf50aa;
+}
+
+/* Delete Button */
+#stackTasks li.InputRow button {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#stackTasks li.InputRow button:hover {
+    background-color: #d32f2f;
+}
+
+/* Add Task Button */
+#addTaskBtn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2196f3;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #1976d2;
+}
+
+/* Submit Button */
+#listForm button[type="submit"] {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+#listForm button[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+/* Scrollbar */
+#stackTasks::-webkit-scrollbar {
+    width: 6px;
+}
+
+#stackTasks::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+#stackTasks::-webkit-scrollbar-track {
+    background-color: #f4f7f9;
+}
